@@ -10,7 +10,7 @@ public class Video {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String titulo;
     private String descricao;
     private int duracao;
@@ -27,7 +27,7 @@ public class Video {
 
     public Video() {}
 
-    public Video(long id, String titulo, String descricao, int duracao, Categoria categoria, List<Visualizacao> listaVisualizacoes, List<Avaliacao> listaAvaliacoes) {
+    public Video(Long id, String titulo, String descricao, int duracao, Categoria categoria, List<Visualizacao> listaVisualizacoes, List<Avaliacao> listaAvaliacoes) {
         this.id = id;
         this.titulo = titulo;
         this.descricao = descricao;
@@ -37,11 +37,11 @@ public class Video {
         this.listaAvaliacoes = listaAvaliacoes;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -10,7 +10,7 @@ public class Avaliacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "perfil_id")
@@ -25,7 +25,7 @@ public class Avaliacao {
 
     public Avaliacao() {}
 
-    public Avaliacao(long id, Perfil perfil, Video video, int nota, String comentario) {
+    public Avaliacao(Long id, Perfil perfil, Video video, int nota, String comentario) {
         this.id = id;
         this.perfil = perfil;
         this.video = video;
@@ -33,11 +33,11 @@ public class Avaliacao {
         this.comentario = comentario;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

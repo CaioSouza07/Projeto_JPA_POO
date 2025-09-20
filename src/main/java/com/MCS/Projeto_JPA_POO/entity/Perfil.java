@@ -10,7 +10,7 @@ public class Perfil {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nomePerfil;
 
     @ManyToOne
@@ -25,7 +25,7 @@ public class Perfil {
 
     public Perfil() {}
 
-    public Perfil(long id, String nomePerfil, Usuario usuario, List<Visualizacao> listaVisualizacoes, List<Avaliacao> listaAvaliacoes) {
+    public Perfil(Long id, String nomePerfil, Usuario usuario, List<Visualizacao> listaVisualizacoes, List<Avaliacao> listaAvaliacoes) {
         this.id = id;
         this.nomePerfil = nomePerfil;
         this.usuario = usuario;
@@ -33,11 +33,11 @@ public class Perfil {
         this.listaAvaliacoes = listaAvaliacoes;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

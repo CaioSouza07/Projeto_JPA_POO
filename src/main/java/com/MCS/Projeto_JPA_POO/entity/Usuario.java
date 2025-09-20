@@ -11,29 +11,29 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nome;
     private String senha;
-    private LocalDate dataCadstro;
+    private LocalDate dataCadastro;
 
     @OneToMany(mappedBy = "usuario")
     private List<Perfil> listaPerfis;
 
     public Usuario() {}
 
-    public Usuario(long id, String nome, String senha, LocalDate dataCadstro, List<Perfil> listaPerfis) {
+    public Usuario(Long id, String nome, String senha, LocalDate dataCadastro, List<Perfil> listaPerfis) {
         this.id = id;
         this.nome = nome;
         this.senha = senha;
-        this.dataCadstro = dataCadstro;
+        this.dataCadastro = dataCadastro;
         this.listaPerfis = listaPerfis;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -53,12 +53,12 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public LocalDate getDataCadstro() {
-        return dataCadstro;
+    public LocalDate getdataCadastro() {
+        return dataCadastro;
     }
 
-    public void setDataCadstro(LocalDate dataCadstro) {
-        this.dataCadstro = dataCadstro;
+    public void setdataCadastro(LocalDate dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 
     public List<Perfil> getListaPerfis() {

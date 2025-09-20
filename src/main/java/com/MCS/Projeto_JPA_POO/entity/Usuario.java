@@ -1,14 +1,22 @@
 package com.MCS.Projeto_JPA_POO.entity;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 import java.util.List;
 
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String nome;
     private String senha;
     private LocalDate dataCadstro;
+
+    @OneToMany(mappedBy = "usuario")
     private List<Perfil> listaPerfis;
 
     public Usuario() {}

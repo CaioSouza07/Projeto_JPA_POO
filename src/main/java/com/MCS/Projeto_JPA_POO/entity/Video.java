@@ -1,15 +1,28 @@
 package com.MCS.Projeto_JPA_POO.entity;
 
+import jakarta.persistence.*;
+
 import java.util.List;
 
+@Entity
+@Table(name = "videos")
 public class Video {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String titulo;
     private String descricao;
     private int duracao;
+
+    @ManyToOne
+    @JoinColumn(name = "categoria_id")
     private Categoria categoria;
+
+    @OneToMany(mappedBy = "video")
     private List<Visualizacao> listaVisualizacoes;
+
+    @OneToMany(mappedBy = "video")
     private List<Avaliacao> listaAvaliacoes;
 
     public Video() {}

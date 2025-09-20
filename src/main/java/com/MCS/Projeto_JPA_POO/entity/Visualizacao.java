@@ -1,12 +1,25 @@
 package com.MCS.Projeto_JPA_POO.entity;
 
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
+@Entity
+@Table(name = "visualizacoes")
 public class Visualizacao {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToOne
+    @JoinColumn(name = "perfil_id")
     private Perfil perfil;
+
+    @ManyToOne
+    @JoinColumn(name = "video_id")
     private Video video;
+
     private LocalDateTime dataHora;
     private long progresso;
 

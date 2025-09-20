@@ -1,10 +1,25 @@
 package com.MCS.Projeto_JPA_POO.entity;
 
+import jakarta.persistence.*;
+
+//PORRAAAAAAAAAAAAAAAAA
+
+@Entity
+@Table(name = "avaliacoes")
 public class Avaliacao {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @ManyToOne
+    @JoinColumn(name = "perfil_id")
     private Perfil perfil;
+
+    @ManyToOne
+    @JoinColumn(name = "video_id")
     private Video video;
+
     private int nota;
     private String comentario;
 

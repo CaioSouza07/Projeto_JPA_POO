@@ -28,10 +28,10 @@ public class Visualizacao {
 
     public Visualizacao() {}
 
-    public Visualizacao(Perfil perfil, Video video, LocalDateTime dataHora, Long progresso) {
+    public Visualizacao(Perfil perfil, Video video, Long progresso) {
         this.perfil = perfil;
         this.video = video;
-        this.dataHora = dataHora;
+        this.dataHora = LocalDateTime.now();
         this.progresso = progresso;
     }
 

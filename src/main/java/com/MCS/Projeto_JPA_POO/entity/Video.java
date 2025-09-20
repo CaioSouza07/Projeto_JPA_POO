@@ -33,14 +33,11 @@ public class Video {
 
     public Video() {}
 
-    public Video(Long id, String titulo, String descricao, int duracao, Categoria categoria, List<Visualizacao> listaVisualizacoes, List<Avaliacao> listaAvaliacoes) {
-        this.id = id;
+    public Video(String titulo, String descricao, int duracao, Categoria categoria) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.duracao = duracao;
         this.categoria = categoria;
-        this.listaVisualizacoes = listaVisualizacoes;
-        this.listaAvaliacoes = listaAvaliacoes;
     }
 
     public Long getId() {

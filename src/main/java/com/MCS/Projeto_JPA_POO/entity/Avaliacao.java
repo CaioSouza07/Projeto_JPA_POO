@@ -29,8 +29,7 @@ public class Avaliacao {
 
     public Avaliacao() {}
 
-    public Avaliacao(Long id, Perfil perfil, Video video, int nota, String comentario) {
-        this.id = id;
+    public Avaliacao(Perfil perfil, Video video, int nota, String comentario) {
         this.perfil = perfil;
         this.video = video;
         this.nota = nota;

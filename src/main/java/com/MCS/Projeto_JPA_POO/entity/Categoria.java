@@ -20,10 +20,8 @@ public class Categoria {
 
     public Categoria() {}
 
-    public Categoria(Long id, String nome, List<Video> listaVideos) {
-        this.id = id;
+    public Categoria(String nome) {
         this.nome = nome;
-        this.listaVideos = listaVideos;
     }
 
     public Long getId() {

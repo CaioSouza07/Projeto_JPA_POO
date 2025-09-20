@@ -27,12 +27,9 @@ public class Perfil {
 
     public Perfil() {}
 
-    public Perfil(Long id, String nomePerfil, Usuario usuario, List<Visualizacao> listaVisualizacoes, List<Avaliacao> listaAvaliacoes) {
-        this.id = id;
+    public Perfil(String nomePerfil, Usuario usuario) {
         this.nomePerfil = nomePerfil;
         this.usuario = usuario;
-        this.listaVisualizacoes = listaVisualizacoes;
-        this.listaAvaliacoes = listaAvaliacoes;
     }
 
     public Long getId() {

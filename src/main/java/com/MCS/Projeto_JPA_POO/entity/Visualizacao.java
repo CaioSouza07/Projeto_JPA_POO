@@ -28,8 +28,7 @@ public class Visualizacao {
 
     public Visualizacao() {}
 
-    public Visualizacao(Long id, Perfil perfil, Video video, LocalDateTime dataHora, Long progresso) {
-        this.id = id;
+    public Visualizacao(Perfil perfil, Video video, LocalDateTime dataHora, Long progresso) {
         this.perfil = perfil;
         this.video = video;
         this.dataHora = dataHora;

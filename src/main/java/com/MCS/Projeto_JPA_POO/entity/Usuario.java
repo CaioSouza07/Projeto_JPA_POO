@@ -30,13 +30,11 @@ public class Usuario {
 
     public Usuario() {}
 
-    public Usuario(Long id, String nome, String email, String senha, LocalDate dataCadastro, List<Perfil> listaPerfis) {
-        this.id = id;
+    public Usuario(String nome, String email, String senha, LocalDate dataCadastro) {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.dataCadastro = dataCadastro;
-        this.listaPerfis = listaPerfis;
     }
 
     public String getEmail() {

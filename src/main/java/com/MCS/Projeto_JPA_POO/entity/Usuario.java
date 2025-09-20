@@ -12,8 +12,17 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "nome", nullable = false)
     private String nome;
+
+    @Column(name = "email", unique = true, nullable = false)
+    private String email;
+
+    @Column(name = "senha", nullable = false)
     private String senha;
+
+    @Column(name = "data_cadastro", nullable = false)
     private LocalDate dataCadastro;
 
     @OneToMany(mappedBy = "usuario")
@@ -21,12 +30,21 @@ public class Usuario {
 
     public Usuario() {}
 
-    public Usuario(Long id, String nome, String senha, LocalDate dataCadastro, List<Perfil> listaPerfis) {
+    public Usuario(Long id, String nome, String email, String senha, LocalDate dataCadastro, List<Perfil> listaPerfis) {
         this.id = id;
         this.nome = nome;
+        this.email = email;
         this.senha = senha;
         this.dataCadastro = dataCadastro;
         this.listaPerfis = listaPerfis;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Long getId() {

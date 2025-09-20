@@ -11,12 +11,18 @@ public class Video {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "titulo", unique = true, nullable = false)
     private String titulo;
+
+    @Column(name = "descricao", length = 1000)
     private String descricao;
+
+    @Column(name = "duracao", nullable = false)
     private int duracao;
 
     @ManyToOne
-    @JoinColumn(name = "categoria_id")
+    @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
     @OneToMany(mappedBy = "video")

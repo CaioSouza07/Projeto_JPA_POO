@@ -13,14 +13,18 @@ public class Avaliacao {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "perfil_id")
+    @JoinColumn(name = "perfil_id", nullable = false)
     private Perfil perfil;
 
     @ManyToOne
-    @JoinColumn(name = "video_id")
+    @JoinColumn(name = "video_id", nullable = false)
     private Video video;
 
+    @Column(name = "nota", nullable = false)
     private int nota;
+
+    @Lob
+    @Column(name = "comentario")
     private String comentario;
 
     public Avaliacao() {}

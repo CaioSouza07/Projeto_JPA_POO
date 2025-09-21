@@ -20,10 +20,10 @@ public interface VideoRepository extends JpaRepository<Video, Long> {
     @Query("""
     SELECT v 
     FROM Video v 
-    JOIN v.listaAvaliacoes a 
+    LEFT JOIN v.listaAvaliacoes a 
     GROUP BY v 
     ORDER BY AVG(a.nota) DESC
-""")
+    """)
     List<Video> top10MaisAvaliados(Pageable pageable);
 
 
@@ -32,10 +32,10 @@ public interface VideoRepository extends JpaRepository<Video, Long> {
     @Query("""
     SELECT v 
     FROM Video v 
-    JOIN v.listaVisualizacoes vis 
+    LEFT JOIN v.listaVisualizacoes vis 
     GROUP BY v 
-    ORDER BY COUNT(vis) DESC
-""")
+    ORDER BY COUNT(vis) DESC 
+    """)
     List<Video> top10MaisAssistidos(Pageable pageable);
 
 

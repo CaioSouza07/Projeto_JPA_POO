@@ -14,7 +14,9 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
         FROM Visualizacao v
         GROUP BY v.perfil.usuario
         ORDER BY COUNT(v) DESC
+        
     """)
     List<Usuario> usuarioMaisAtivo(Pageable pageable);
+    
 }
 

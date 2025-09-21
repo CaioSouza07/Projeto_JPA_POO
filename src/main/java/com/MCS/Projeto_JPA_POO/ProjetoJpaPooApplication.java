@@ -29,9 +29,9 @@ public class ProjetoJpaPooApplication {
 	){
 		return args -> {
 
-//			BORA INSERIR ALGUNS DADOS NO NOSSA BANCOO
+//          Inserts no Schema
 
-//			na tabela de usuarioa
+//			Na tabela de usuarios
 			Usuario caio = new Usuario("Caio", "caio@email.com", "senha123");
 			Usuario samuel = new Usuario("Samuel", "samuel@email.com", "senha123");
 			Usuario mathias = new Usuario("Mathias", "mathias@email.com", "senha123");

@@ -2,8 +2,6 @@ package com.MCS.Projeto_JPA_POO.entity;
 
 import jakarta.persistence.*;
 
-//PORRAAAAAAAAAAAAAAAAA
-
 @Entity
 @Table(name = "avaliacoes")
 public class Avaliacao {

@@ -17,6 +17,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
         
     """)
     List<Usuario> usuarioMaisAtivo(Pageable pageable);
-    
+
 }
 

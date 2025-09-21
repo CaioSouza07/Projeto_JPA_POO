@@ -31,7 +31,7 @@
   <summary> Diagramas </summary>
 
 ## Diagrama UML
-![Diagrama UML](/.jpg)
+![Diagrama UML](/UML_JPA_SPRING_BOOT.png)
 </details>
 
 ----------------------------------------------------------------------------------
